@@ -1,0 +1,51 @@
+## Code Review for TestProcessing-1
+This review is for the code in Program.cs of the TestProcessing-1 project. The program reads a text file (sample.txt), removes punctuation, converts all words to lowercase, counts the number of times each word appears, and shows how many unique words there are.
+
+1. Is the code properly documented/commented?
+There are no comments in the code, which makes it harder to understand what each part is doing.
+Suggestions:
+- Add a summary at the beginning of the Main method to explain what the program does.
+- Add short comments above important steps like reading the file, processing lines, and counting words.
+- Use clear variable names (e.g., instead of a, use wordCounts).
+
+2. Does the code handle errors properly?
+The code does not check for errors like missing files or invalid user input.
+Suggestions:
+- Use try-catch blocks when opening files to avoid crashes.
+- Check if the input path is empty before trying to open it.
+- Confirm that the file exists before processing.
+
+3. Suggestions to improve the code:
+Naming:
+- Variables like a, z, and w are confusing.
+- Use clear names like wordCounts, filePath, and lines.
+
+Code Structure:
+- All code is inside Main, which makes it hard to read.
+- Break it into smaller methods: ReadFile(), CountWords(), etc.
+
+Error Handling:
+- No handling for missing files or bad input.
+- Add try-catch and input checks.
+
+File Assumptions:
+- Code assumes the file always exists and is correct.
+- You can set a default file or show a clear message if it's missing.
+
+OOP Principles:
+- This code is procedural.
+- Try creating a class like WordCounter to group related logic and make the code reusable.
+
+Output:
+- The prompt gimmefile is not clear.
+- Use something like: "Please enter the file path:"
+- Also, align the output better and fix typos like uniquez.
+
+Program Logic:
+- The logic works, but some parts can be cleaner.
+- Use built-in functions like RemoveEmptyEntries etc.
+
+
+
+
+
